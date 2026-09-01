@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({ component: Index });
 
 const WHATSAPP = "https://wa.me/5511979940067?text=Ol%C3%A1%20Camila%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico.";
 const INSTAGRAM = "https://www.instagram.com/psicologiacamilanunesmagalhaes/";
-const CAMILA_PHOTO = "https://cdn.jsdelivr.net/gh/goldenstorerp-a11y/camila-s-therapy-space@main/public/camila-nunes.png";
+const CAMILA_PHOTO = "https://raw.githubusercontent.com/goldenstorerp-a11y/camila-s-therapy-space/main/public/camila-nunes.png";
 
 const faqs = [
   ["Como funciona o primeiro contato?", "Você pode entrar em contato pelo WhatsApp. A partir dessa conversa, explico como funciona o atendimento e combinamos os próximos passos."],
@@ -23,163 +23,18 @@ function Index() {
 
   return (
     <div className="site-shell">
-      <header className="site-header">
-        <div className="container header-inner">
-          <a className="brand" href="#inicio" onClick={closeMenu}>
-            <PsychologyMark />
-            <span className="brand-name">Camila Nunes</span>
-            <span className="brand-role">Psicóloga</span>
-          </a>
-          <button className="menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen}>
-            <span />
-            <span />
-          </button>
-          <nav className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="Navegação principal">
-            <a href="#inicio" onClick={closeMenu}>Início</a>
-            <a href="#sobre" onClick={closeMenu}>Sobre</a>
-            <a href="#atendimento" onClick={closeMenu}>Atendimento</a>
-            <a href="#processo" onClick={closeMenu}>Como funciona</a>
-            <a href="#duvidas" onClick={closeMenu}>Dúvidas</a>
-            <a className="header-cta" href={WHATSAPP} target="_blank" rel="noreferrer" onClick={closeMenu}>Agendar conversa</a>
-          </nav>
-        </div>
-      </header>
-
+      <header className="site-header"><div className="container header-inner"><a className="brand" href="#inicio" onClick={closeMenu}><PsychologyMark /><span className="brand-name">Camila Nunes</span><span className="brand-role">Psicóloga</span></a><button className="menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen}><span /><span /></button><nav className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="Navegação principal"><a href="#inicio" onClick={closeMenu}>Início</a><a href="#sobre" onClick={closeMenu}>Sobre</a><a href="#atendimento" onClick={closeMenu}>Atendimento</a><a href="#processo" onClick={closeMenu}>Como funciona</a><a href="#duvidas" onClick={closeMenu}>Dúvidas</a><a className="header-cta" href={WHATSAPP} target="_blank" rel="noreferrer" onClick={closeMenu}>Agendar conversa</a></nav></div></header>
       <main>
-        <section className="hero" id="inicio">
-          <div className="container hero-grid">
-            <div className="hero-content">
-              <p className="overline">Psicologia clínica</p>
-              <h1>Um lugar seguro para <i>entender o que você vive.</i></h1>
-              <p className="hero-lead">A terapia pode ser o espaço que faltava para desacelerar, colocar em palavras o que você sente e olhar para sua história com mais clareza.</p>
-              <div className="hero-buttons">
-                <a className="primary-button" href={WHATSAPP} target="_blank" rel="noreferrer">Conversar com a Camila</a>
-                <a className="secondary-link" href="#sobre">Conheça meu trabalho <span>→</span></a>
-              </div>
-              <div className="hero-note"><span>Atendimento psicológico individual</span><span>Online</span></div>
-            </div>
-            <div className="hero-photo-area">
-              <div className="photo-card">
-                <img src={CAMILA_PHOTO} alt="Camila Nunes, psicóloga" loading="eager" decoding="async" />
-                <div className="photo-label"><strong>Camila Nunes</strong><span>Psicóloga</span></div>
-              </div>
-              <div className="photo-side-text">ESCUTA<br />PRESENÇA<br />CUIDADO</div>
-            </div>
-          </div>
-          <div className="hero-bottom-line" />
-        </section>
-
-        <section className="positioning">
-          <div className="container positioning-grid">
-            <p>Psicologia com uma abordagem humana, cuidadosa e individualizada.</p>
-            <div><span>01</span><strong>Escuta sem julgamentos</strong></div>
-            <div><span>02</span><strong>Respeito ao seu tempo</strong></div>
-            <div><span>03</span><strong>Processo construído em conjunto</strong></div>
-          </div>
-        </section>
-
-        <section className="about section" id="sobre">
-          <div className="container about-grid">
-            <div className="section-label"><span>01</span><small>Sobre mim</small></div>
-            <div className="about-main">
-              <p className="overline">Prazer, eu sou Camila</p>
-              <h2>Você não precisa chegar à terapia sabendo exatamente o que dizer.</h2>
-              <div className="about-text">
-                <p>Existem momentos em que a vida parece pedir uma pausa. Quando sentimentos, relações, escolhas ou preocupações começam a ocupar espaço demais, ter alguém para escutar pode fazer diferença.</p>
-                <p>Meu trabalho parte de uma escuta atenta e respeitosa, considerando a singularidade de cada pessoa. A terapia é um espaço para olhar para o que você vive, compreender novas possibilidades e construir caminhos que façam sentido para a sua história.</p>
-              </div>
-              <a className="underlined-link" href={WHATSAPP} target="_blank" rel="noreferrer">Quero conhecer o atendimento <span>→</span></a>
-            </div>
-          </div>
-        </section>
-
-        <section className="services section" id="atendimento">
-          <div className="container">
-            <div className="services-heading">
-              <div><p className="overline">Atendimento</p><h2>Um processo pensado para você.</h2></div>
-              <p>Conheça as principais formas como o atendimento pode fazer parte da sua rotina de cuidado.</p>
-            </div>
-            <div className="service-grid">
-              <article className="service-card service-featured">
-                <span className="service-index">01</span>
-                <div><h3>Psicoterapia individual</h3><p>Um espaço individual de escuta e reflexão para compreender emoções, pensamentos, relações, escolhas e situações que estejam atravessando sua vida.</p></div>
-                <a href={WHATSAPP} target="_blank" rel="noreferrer">Saber mais <span>→</span></a>
-              </article>
-              <article className="service-card">
-                <span className="service-index">02</span>
-                <div><h3>Atendimento online</h3><p>Uma experiência de cuidado com praticidade e privacidade, sem perder a proximidade do processo terapêutico.</p></div>
-                <a href={WHATSAPP} target="_blank" rel="noreferrer">Falar comigo <span>→</span></a>
-              </article>
-              <article className="service-card">
-                <span className="service-index">03</span>
-                <div><h3>Autoconhecimento</h3><p>Um espaço para ampliar a percepção sobre sentimentos, necessidades, padrões e escolhas.</p></div>
-                <a href={WHATSAPP} target="_blank" rel="noreferrer">Começar conversa <span>→</span></a>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section className="process section" id="processo">
-          <div className="container process-grid">
-            <div className="process-intro">
-              <p className="overline">02 — Como funciona</p>
-              <h2>O primeiro passo pode ser simples.</h2>
-              <p>Você não precisa ter todas as respostas para iniciar. A primeira conversa serve justamente para entender o que você procura e conhecer o funcionamento do atendimento.</p>
-              <a className="dark-button" href={WHATSAPP} target="_blank" rel="noreferrer">Agendar conversa</a>
-            </div>
-            <div className="process-list">
-              <div className="process-item"><span>01</span><div><h3>Entre em contato</h3><p>Fale pelo WhatsApp e conte, do seu jeito, o que trouxe você até aqui.</p></div></div>
-              <div className="process-item"><span>02</span><div><h3>Tire suas dúvidas</h3><p>Conversamos sobre o atendimento, formato e disponibilidade.</p></div></div>
-              <div className="process-item"><span>03</span><div><h3>Comece o seu processo</h3><p>As sessões passam a ser um espaço contínuo de escuta, reflexão e cuidado.</p></div></div>
-            </div>
-          </div>
-        </section>
-
-        <section className="quote-section">
-          <div className="container quote-inner">
-            <span className="quote-mark">“</span>
-            <blockquote>Cuidar de si também é aprender a se escutar.</blockquote>
-            <p>Um processo no seu ritmo, com respeito à sua história.</p>
-          </div>
-        </section>
-
-        <section className="faq section" id="duvidas">
-          <div className="container faq-grid">
-            <div className="faq-intro">
-              <p className="overline">Dúvidas frequentes</p>
-              <h2>Antes de começar, é natural ter perguntas.</h2>
-              <p>Confira algumas respostas. Se ainda tiver dúvidas, fale diretamente comigo.</p>
-              <a className="underlined-link" href={WHATSAPP} target="_blank" rel="noreferrer">Falar pelo WhatsApp <span>→</span></a>
-            </div>
-            <div className="faq-list">
-              {faqs.map(([question, answer], index) => (
-                <div className={openFaq === index ? "faq-item active" : "faq-item"} key={question}>
-                  <button type="button" onClick={() => setOpenFaq(openFaq === index ? null : index)} aria-expanded={openFaq === index}>
-                    <span>{question}</span><b>{openFaq === index ? "−" : "+"}</b>
-                  </button>
-                  {openFaq === index && <div className="faq-answer"><p>{answer}</p></div>}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="contact">
-          <div className="container contact-inner">
-            <div><p className="overline">Vamos conversar</p><h2>Seu cuidado pode começar com uma mensagem.</h2><p>Quando sentir que é o momento, entre em contato. Será um prazer explicar como funciona o atendimento.</p></div>
-            <div className="contact-actions"><a className="contact-button" href={WHATSAPP} target="_blank" rel="noreferrer">Falar com a Camila</a><a className="instagram-link" href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram <span>→</span></a></div>
-          </div>
-        </section>
+        <section className="hero" id="inicio"><div className="container hero-grid"><div className="hero-content"><p className="overline">Psicologia clínica</p><h1>Um lugar seguro para <i>entender o que você vive.</i></h1><p className="hero-lead">A terapia pode ser o espaço que faltava para desacelerar, colocar em palavras o que você sente e olhar para sua história com mais clareza.</p><div className="hero-buttons"><a className="primary-button" href={WHATSAPP} target="_blank" rel="noreferrer">Conversar com a Camila</a><a className="secondary-link" href="#sobre">Conheça meu trabalho <span>→</span></a></div><div className="hero-note"><span>Atendimento psicológico individual</span><span>Online</span></div></div><div className="hero-photo-area"><div className="photo-card"><img src={CAMILA_PHOTO} alt="Camila Nunes, psicóloga" className="camila-photo" loading="eager" decoding="async" /><div className="photo-label"><strong>Camila Nunes</strong><span>Psicóloga</span></div></div><div className="photo-side-text">ESCUTA<br />PRESENÇA<br />CUIDADO</div></div></div><div className="hero-bottom-line" /></section>
+        <section className="positioning"><div className="container positioning-grid"><p>Psicologia com uma abordagem humana, cuidadosa e individualizada.</p><div><span>01</span><strong>Escuta sem julgamentos</strong></div><div><span>02</span><strong>Respeito ao seu tempo</strong></div><div><span>03</span><strong>Processo construído em conjunto</strong></div></div></section>
+        <section className="about section" id="sobre"><div className="container about-grid"><div className="section-label"><span>01</span><small>Sobre mim</small></div><div className="about-main"><p className="overline">Prazer, eu sou Camila</p><h2>Você não precisa chegar à terapia sabendo exatamente o que dizer.</h2><div className="about-text"><p>Existem momentos em que a vida parece pedir uma pausa. Quando sentimentos, relações, escolhas ou preocupações começam a ocupar espaço demais, ter alguém para escutar pode fazer diferença.</p><p>Meu trabalho parte de uma escuta atenta e respeitosa, considerando a singularidade de cada pessoa. A terapia é um espaço para olhar para o que você vive, compreender novas possibilidades e construir caminhos que façam sentido para a sua história.</p></div><a className="underlined-link" href={WHATSAPP} target="_blank" rel="noreferrer">Quero conhecer o atendimento <span>→</span></a></div></div></section>
+        <section className="services section" id="atendimento"><div className="container"><div className="services-heading"><div><p className="overline">Atendimento</p><h2>Um processo pensado para você.</h2></div><p>Conheça as principais formas como o atendimento pode fazer parte da sua rotina de cuidado.</p></div><div className="service-grid"><article className="service-card service-featured"><span className="service-index">01</span><div><h3>Psicoterapia individual</h3><p>Um espaço individual de escuta e reflexão para compreender emoções, pensamentos, relações, escolhas e situações que estejam atravessando sua vida.</p></div><a href={WHATSAPP} target="_blank" rel="noreferrer">Saber mais <span>→</span></a></article><article className="service-card"><span className="service-index">02</span><div><h3>Atendimento online</h3><p>Uma experiência de cuidado com praticidade e privacidade, sem perder a proximidade do processo terapêutico.</p></div><a href={WHATSAPP} target="_blank" rel="noreferrer">Falar comigo <span>→</span></a></article><article className="service-card"><span className="service-index">03</span><div><h3>Autoconhecimento</h3><p>Um espaço para ampliar a percepção sobre sentimentos, necessidades, padrões e escolhas.</p></div><a href={WHATSAPP} target="_blank" rel="noreferrer">Começar conversa <span>→</span></a></article></div></div></section>
+        <section className="process section" id="processo"><div className="container process-grid"><div className="process-intro"><p className="overline">02 — Como funciona</p><h2>O primeiro passo pode ser simples.</h2><p>Você não precisa ter todas as respostas para iniciar. A primeira conversa serve justamente para entender o que você procura e conhecer o funcionamento do atendimento.</p><a className="dark-button" href={WHATSAPP} target="_blank" rel="noreferrer">Agendar conversa</a></div><div className="process-list"><div className="process-item"><span>01</span><div><h3>Entre em contato</h3><p>Fale pelo WhatsApp e conte, do seu jeito, o que trouxe você até aqui.</p></div></div><div className="process-item"><span>02</span><div><h3>Tire suas dúvidas</h3><p>Conversamos sobre o atendimento, formato e disponibilidade.</p></div></div><div className="process-item"><span>03</span><div><h3>Comece o seu processo</h3><p>As sessões passam a ser um espaço contínuo de escuta, reflexão e cuidado.</p></div></div></div></div></section>
+        <section className="quote-section"><div className="container quote-inner"><span className="quote-mark">“</span><blockquote>Cuidar de si também é aprender a se escutar.</blockquote><p>Um processo no seu ritmo, com respeito à sua história.</p></div></section>
+        <section className="faq section" id="duvidas"><div className="container faq-grid"><div className="faq-intro"><p className="overline">Dúvidas frequentes</p><h2>Antes de começar, é natural ter perguntas.</h2><p>Confira algumas respostas. Se ainda tiver dúvidas, fale diretamente comigo.</p><a className="underlined-link" href={WHATSAPP} target="_blank" rel="noreferrer">Falar pelo WhatsApp <span>→</span></a></div><div className="faq-list">{faqs.map(([question, answer], index) => <div className={openFaq === index ? "faq-item active" : "faq-item"} key={question}><button type="button" onClick={() => setOpenFaq(openFaq === index ? null : index)} aria-expanded={openFaq === index}><span>{question}</span><b>{openFaq === index ? "−" : "+"}</b></button>{openFaq === index && <div className="faq-answer"><p>{answer}</p></div>}</div>)}</div></div></section>
+        <section className="contact"><div className="container contact-inner"><div><p className="overline">Vamos conversar</p><h2>Seu cuidado pode começar com uma mensagem.</h2><p>Quando sentir que é o momento, entre em contato. Será um prazer explicar como funciona o atendimento.</p></div><div className="contact-actions"><a className="contact-button" href={WHATSAPP} target="_blank" rel="noreferrer">Falar com a Camila</a><a className="instagram-link" href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram <span>→</span></a></div></div></section>
       </main>
-
-      <footer className="footer">
-        <div className="container footer-top">
-          <div><a className="footer-brand" href="#inicio"><PsychologyMark footer /><span>Camila Nunes<small>Psicóloga</small></span></a><p>Psicologia com acolhimento, presença e respeito à sua história.</p></div>
-          <div className="footer-column"><strong>Navegação</strong><a href="#sobre">Sobre</a><a href="#atendimento">Atendimento</a><a href="#processo">Como funciona</a><a href="#duvidas">Dúvidas</a></div>
-          <div className="footer-column"><strong>Contato</strong><a href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp</a><a href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram</a></div>
-        </div>
-        <div className="container footer-bottom"><span>© {new Date().getFullYear()} Camila Nunes Psicóloga</span><span>Todos os direitos reservados.</span></div>
-      </footer>
+      <footer className="footer"><div className="container footer-top"><div><a className="footer-brand" href="#inicio"><PsychologyMark footer /><span>Camila Nunes<small>Psicóloga</small></span></a><p>Psicologia com acolhimento, presença e respeito à sua história.</p></div><div className="footer-column"><strong>Navegação</strong><a href="#sobre">Sobre</a><a href="#atendimento">Atendimento</a><a href="#processo">Como funciona</a><a href="#duvidas">Dúvidas</a></div><div className="footer-column"><strong>Contato</strong><a href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp</a><a href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Camila Nunes Psicóloga</span><span>Todos os direitos reservados.</span></div></footer>
     </div>
   );
 }
