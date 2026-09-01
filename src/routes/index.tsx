@@ -14,7 +14,7 @@ const faqs = [
   ["Como faço para agendar?", "Clique em qualquer botão de contato do site e fale comigo pelo WhatsApp. Vou orientar você sobre disponibilidade e agendamento."],
 ];
 
-const PsychologyMark = ({ footer = false }: { footer?: boolean }) => <img src="/psicologia.svg" alt="Símbolo da Psicologia" className={footer ? "psychology-mark footer-mark" : "psychology-mark"} />;
+const PsychologyMark = ({ footer = false }: { footer?: boolean }) => <img src="/psicologia.svg" alt="Símbolo da Psicologia" className={footer ? "psychology-mark footer-mark" : "psychology-mark"} style={{ width: footer ? 33 : 34, height: footer ? 33 : 34, objectFit: "contain", display: "block", flex: "none" }} />;
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
