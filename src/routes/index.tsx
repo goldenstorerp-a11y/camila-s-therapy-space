@@ -5,6 +5,7 @@ export const Route = createFileRoute("/")({ component: Index });
 
 const WHATSAPP = "https://wa.me/5511979940067?text=Ol%C3%A1%20Camila%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico.";
 const INSTAGRAM = "https://www.instagram.com/psicologiacamilanunesmagalhaes/";
+const CAMILA_PHOTO = "https://cdn.jsdelivr.net/gh/goldenstorerp-a11y/camila-s-therapy-space@main/public/camila-nunes.png";
 
 const faqs = [
   ["Como funciona o primeiro contato?", "Você pode entrar em contato pelo WhatsApp. A partir dessa conversa, explico como funciona o atendimento e combinamos os próximos passos."],
@@ -12,6 +13,8 @@ const faqs = [
   ["Preciso saber exatamente o que estou sentindo?", "Não. Você não precisa ter tudo organizado antes de começar. A terapia também pode ser um espaço para entender e nomear aquilo que está acontecendo."],
   ["Como faço para agendar?", "Clique em qualquer botão de contato do site e fale comigo pelo WhatsApp. Vou orientar você sobre disponibilidade e agendamento."],
 ];
+
+const PsychologyMark = ({ footer = false }: { footer?: boolean }) => <img src="/psicologia.svg" alt="Símbolo da Psicologia" className={footer ? "psychology-mark footer-mark" : "psychology-mark"} />;
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +26,7 @@ function Index() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#inicio" onClick={closeMenu}>
-            <img src="/favicon.ico" alt="" className="brand-mark" aria-hidden="true" />
+            <PsychologyMark />
             <span className="brand-name">Camila Nunes</span>
             <span className="brand-role">Psicóloga</span>
           </a>
@@ -57,7 +60,7 @@ function Index() {
             </div>
             <div className="hero-photo-area">
               <div className="photo-card">
-                <img src="/camila-nunes.png" alt="Camila Nunes, psicóloga" />
+                <img src={CAMILA_PHOTO} alt="Camila Nunes, psicóloga" loading="eager" decoding="async" />
                 <div className="photo-label"><strong>Camila Nunes</strong><span>Psicóloga</span></div>
               </div>
               <div className="photo-side-text">ESCUTA<br />PRESENÇA<br />CUIDADO</div>
@@ -171,7 +174,7 @@ function Index() {
 
       <footer className="footer">
         <div className="container footer-top">
-          <div><a className="footer-brand" href="#inicio"><img src="/favicon.ico" alt="" aria-hidden="true" /><span>Camila Nunes<small>Psicóloga</small></span></a><p>Psicologia com acolhimento, presença e respeito à sua história.</p></div>
+          <div><a className="footer-brand" href="#inicio"><PsychologyMark footer /><span>Camila Nunes<small>Psicóloga</small></span></a><p>Psicologia com acolhimento, presença e respeito à sua história.</p></div>
           <div className="footer-column"><strong>Navegação</strong><a href="#sobre">Sobre</a><a href="#atendimento">Atendimento</a><a href="#processo">Como funciona</a><a href="#duvidas">Dúvidas</a></div>
           <div className="footer-column"><strong>Contato</strong><a href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp</a><a href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram</a></div>
         </div>
