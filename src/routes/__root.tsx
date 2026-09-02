@@ -37,7 +37,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  return <html lang="pt-BR"><head><HeadContent /><style>{`.photo-card{position:relative!important;overflow:hidden!important;background:#f7f4ef!important}.photo-card img.camila-photo{position:absolute!important;left:0!important;top:0!important;width:100%!important;height:calc(100% + 120px)!important;max-width:none!important;display:block!important;object-fit:cover!important;object-position:center top!important;transform:none!important}.photo-label{z-index:5!important}`}</style></head><body>{children}<Scripts /></body></html>;
+  return <html lang="pt-BR"><head><HeadContent /><style>{`.photo-card{position:relative!important;overflow:hidden!important;background:transparent!important;height:auto!important;aspect-ratio:1/1!important}.photo-card img.camila-photo{position:static!important;inset:auto!important;width:100%!important;height:auto!important;min-width:0!important;min-height:0!important;max-width:100%!important;display:block!important;object-fit:initial!important;object-position:initial!important;margin:0!important;padding:0!important;border:0!important;transform:none!important}.photo-card:after{z-index:3!important}.photo-label{z-index:5!important}`}</style></head><body>{children}<Scripts /></body></html>;
 }
 
 function RootComponent() {
