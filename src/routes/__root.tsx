@@ -37,7 +37,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  return <html lang="pt-BR"><head><HeadContent /><style>{`.photo-card img.camila-photo{content:url('/camila-nunes.jpg');object-fit:cover;object-position:center top}`}</style></head><body>{children}<Scripts /></body></html>;
+  return <html lang="pt-BR"><head><HeadContent /><style>{`.photo-card img{content:url('/camila-nunes.jpg')!important;object-fit:cover!important;object-position:center top!important}`}</style></head><body>{children}<Scripts /></body></html>;
 }
 
 function RootComponent() {
