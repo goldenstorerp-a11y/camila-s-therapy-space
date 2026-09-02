@@ -37,7 +37,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  return <html lang="pt-BR"><head><HeadContent /><style>{`.photo-card{background:#d8d0c8 url('/camila-nunes.jpg') center top/cover no-repeat!important}.photo-card img{opacity:0!important;width:100%!important;height:100%!important}`}</style></head><body>{children}<Scripts /></body></html>;
+  const photoFix = `
+    .photo-card{position:relative!important;overflow:hidden!important;background:#d8d0c8!important}
+    .photo-card:before{content:""!important;position:absolute!important;inset:0!important;background-image:url('/camila-nunes.jpg')!important;background-size:cover!important;background-position:center top!important;background-repeat:no-repeat!important;z-index:0!important}
+    .photo-card img{display:block!important;width:100%!important;height:100%!important;opacity:0!important;visibility:hidden!important}
+    .photo-card:after{z-index:1!important}
+    .photo-label{z-index:3!important}
+  `;
+  return <html lang="pt-BR"><head><HeadContent /><style>{photoFix}</style></head><body>{children}<Scripts /></body></html>;
 }
 
 function RootComponent() {
